@@ -4,23 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visszaszámláló</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding-top: 50px;
+            min-height: 100vh;
+
+            /* ANIMÁLT HÁTTÉR */
+            background: linear-gradient(270deg, #ffd500, #0077ff);
+            background-size: 400% 400%;
+            animation: gradientFade 10s ease infinite;
         }
+
+        @keyframes gradientFade {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
         #countdown {
             font-size: 2rem;
             font-weight: bold;
+            color: white;
+            margin-top: 20px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 300px;
         }
     </style>
 </head>
+
 <body>
 
     <h1>Visszaszámláló 2026.04.12-ig</h1>
     <img src="kep.jpg" alt="Kép leírása">
-    <div id="countdown">Bukik a fidesz...</div>
+    <div id="countdown">Betöltés...</div>
 
     <script>
         const targetDate = new Date("2026-04-12T00:00:00").getTime();
